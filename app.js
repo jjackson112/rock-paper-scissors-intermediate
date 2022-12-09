@@ -14,6 +14,7 @@ const handleClick = (e) => {
     userChoice = e.target.id
     userChoiceDisplay.innerHTML = 'User Choice: ' + userChoice
     generateComputerChoice()
+    getResult()
 }
 
 // create three buttons, grab button with an id, give the id choices, event listener, call function handleClick
@@ -38,5 +39,16 @@ const getResult = () => {
         case 'rockscissors':
         case 'paperrock':  
             resultDisplay.innerHTML = "You're the winner!"
+            break
+        case 'paperscissors':
+        case 'rockpaper':
+        case 'scissorsrock':  
+            resultDisplay.innerHTML = "You're the loser!"
+            break
+        case 'paperpaper':
+        case 'rockrock':
+        case 'scissorsscissors':  
+            resultDisplay.innerHTML = "It's a tie!"
+            break
     }
 }
